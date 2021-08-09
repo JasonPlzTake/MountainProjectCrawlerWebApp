@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebApp.Models.RouteInfoModel>
+
+@{
+    ViewData["Title"] = "ShowAllRoutes";
+}
+
+<h1>ShowAllRoutes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.routeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.routeGrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.routeLocation)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.routeLink)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.routeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.routeGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.routeLocation)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.routeLink)
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
